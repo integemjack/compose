@@ -75,3 +75,4 @@ check-go-mod:
 .PHONY: yamldocs
 yamldocs:
 	go run docs/yaml/main/generate.go
+ 
