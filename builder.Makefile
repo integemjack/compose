@@ -48,6 +48,7 @@ compose-plugin:
 cross:
 	GOOS=linux   GOARCH=amd64 $(GO_BUILD) $(TAGS) -o $(COMPOSE_BINARY)-linux-x86_64 ./cmd
 	GOOS=linux   GOARCH=arm64 $(GO_BUILD) $(TAGS) -o $(COMPOSE_BINARY)-linux-aarch64 ./cmd
+	GOOS=linux   GOARM=5 GOARCH=arm $(GO_BUILD) $(TAGS) -o $(COMPOSE_BINARY)-linux-armv5 ./cmd
 	GOOS=linux   GOARM=6 GOARCH=arm $(GO_BUILD) $(TAGS) -o $(COMPOSE_BINARY)-linux-armv6 ./cmd
 	GOOS=linux   GOARM=7 GOARCH=arm $(GO_BUILD) $(TAGS) -o $(COMPOSE_BINARY)-linux-armv7 ./cmd
 	GOOS=linux   GOARCH=s390x $(GO_BUILD) $(TAGS) -o $(COMPOSE_BINARY)-linux-s390x ./cmd
